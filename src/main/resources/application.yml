@@ -1,0 +1,17 @@
+spring:
+  profiles: 
+    active: dev
+  jackson:
+    date-format: yyyy-MM-dd HH:mm
+  datasource:
+    url: jdbc:oracle:thin:@127.0.0.1:creditdb1
+    username: mm
+    password: pp
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: oracle.jdbc.OracleDriver
+    hikari:
+      auto-commit: true
+      idle-timeout: 0
+      max-lifetime: 60000
+      connection-test-query: SELECT 1 FROM DUAL
+      connection-init-sql: SELECT 1 FROM DUAL
